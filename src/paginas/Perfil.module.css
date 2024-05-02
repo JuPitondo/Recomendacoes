@@ -3,6 +3,8 @@
     display:flex;
     justify-content:center;
     align-items: center;
+    background-color:  var(--cinza-escuro);
+    flex-direction: column;
 
 }
 
@@ -11,7 +13,7 @@
     flex-direction: column;
     background-color: var(--cinza-claro);
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .campo{
@@ -26,4 +28,14 @@
     color: var(--cinza-claro);
     padding: 8px;
     border-radius: 8px;
+}
+
+.mensagem{
+    font-size: .75rem;
+    font-weight: 400;
+    color: red;
+    margin-top: -4px;
+    margin-bottom: 16px;
+
+
 }
