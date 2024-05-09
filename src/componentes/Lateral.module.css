@@ -49,6 +49,7 @@
     background-color: transparent;
     color: var(--roxo-escuro);
     transition: color 0.1s, background-color 0.1s;
+    margin-bottom: 15px;
 }
 
 .botao strong {

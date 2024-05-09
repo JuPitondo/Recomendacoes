@@ -1,5 +1,5 @@
 import estilos from './Lateral.module.css'
-import {Gear} from '@phosphor-icons/react'
+import {Gear, FilmSlate} from '@phosphor-icons/react'
 
 export function Lateral(){
     return(
@@ -10,11 +10,23 @@ export function Lateral(){
                 <img className={ estilos.avatar } src='https://images.unsplash.com/photo-1637781930945-090e6672b750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1902&q=80' />
                 <strong>Ralfe</strong>
             </div>
+
+
             <div className={ estilos.opcoes }>
-                <p className={ estilos.botao }>
+
+            <Link className={ estilos.botao }
+            to='/Inicial'
+            >
+                    <FilmSlate size={20} />
+                    <strong>Filmes</strong>
+                </Link>
+
+                <Link className={ estilos.botao }
+                to='Perfil'
+                >
                     <Gear size={20} />
                     <strong>Perfil</strong>
-                </p>
+                </Link>
             </div>
         </aside>
     )

@@ -1,10 +1,13 @@
 import estilos from './Login.module.css'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export function Login(){
 
 const [usuario, setUsuario] = useState('')
 const [senha, setSenha] = useState ('')
+
+const navigate = useNavigate()
 
 function obterDadosFormulario(event){
 
@@ -13,13 +16,16 @@ function obterDadosFormulario(event){
     console.log(`Usuario: ${usuario}`)
     console.log(`Senha: ${senha}`)
 
+    navigate('Inicial')
+
 }
 
     return(
         <div className={estilos.conteiner}>
-            <form className={estilos.formulario}
-            onSubmit={obterDadosFormulario}
-            >
+
+            <form 
+            className={estilos.formulario}
+            onSubmit={obterDadosFormulario} >
 
     <input
       className={estilos.campo}

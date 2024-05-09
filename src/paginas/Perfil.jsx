@@ -10,11 +10,14 @@ nome: z.string()
 .min(1, 'Informe um nome')
 .max(25, 'Maximo 25 caracteres'),
 
-nome: z.string()
-.min(5, 'Minimo de 5 caracteres')
-.max(10, 'Maximo 10 caracteres'),
+email: z.string()
+.email({message: 'Informe um e-mail válido'}),
 
-nome: z.string()
+usuario: z.string()
+.min(5, 'Minimo de 5 caracteres')
+.max(25, 'Maximo 25 caracteres'),
+
+senha: z.string()
 .min(8, 'Informe 8 caracteres')
 .max(8, 'Informe 8 caracteres'),
 
@@ -24,7 +27,10 @@ nome: z.string()
 
 
 export function Perfil(){
- const {register, handleSubmit, formState:{error}} = useForm({
+ const {register, 
+  handleSubmit,
+  formState:{errors}
+} = useForm({
   resolver: zodResolver(perfilSchema)
  })
 
@@ -41,8 +47,9 @@ return(
 
     <p className={estilos.titulo}>Perfil</p>
 
-    <form className={estilos.formulario}
-     onSubmit={handleSubmit(obterDadosFormulario)}
+    <form onSubmit={handleSubmit(obterDadosFormulario)}
+    className={estilos.formulario}
+     
 
     >
 
@@ -55,6 +62,18 @@ return(
       <p className={estilos.mensagem}>{error.nome.message}</p>
      )}
     
+
+    <input
+      {...register('email')}
+      className={estilos.campo}
+      placeholder='Email'
+     />
+     {error.email && (
+      <p className={estilos.mensagem}>{error.email.message}</p>
+     )}
+
+
+
     <input
       {...register('usuario')}
       className={estilos.campo}
