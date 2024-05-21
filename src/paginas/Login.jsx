@@ -1,48 +1,52 @@
 import estilos from './Login.module.css'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 export function Login(){
 
-const [usuario, setUsuario] = useState('')
-const [senha, setSenha] = useState ('')
+    const [usuario, setUsuario] = useState('')
+    const [senha, setSenha] = useState('')
 
-const navigate = useNavigate()
+    const navigate = useNavigate()
 
-function obterDadosFormulario(event){
 
-    event.preventDefault()
+    function obterDadosFormulario(e){
 
-    console.log(`Usuario: ${usuario}`)
-    console.log(`Senha: ${senha}`)
+        e.preventDefault()
 
-    navigate('Inicial')
+        console.log(`Usuário: ${usuario}`)
+        console.log(`Senha: ${senha}`)
 
-}
+        navigate('inicial')
+
+    }
 
     return(
-        <div className={estilos.conteiner}>
+        <div className={estilos.conteiner}> 
 
             <form 
-            className={estilos.formulario}
-            onSubmit={obterDadosFormulario} >
+                className={estilos.formulario}
+                onSubmit={obterDadosFormulario}
+            > 
 
-    <input
-      className={estilos.campo}
-      placeholder='Usuario'
-      value={usuario}
-      onChange={ event => setUsuario(event.target.value) }
-    />
-    
-    <input 
-      className={estilos.campo}
-      placeholder='Senha'
-      value={senha}
-      onChange={ event => setSenha(event.target.value) }
-    />
+                <input 
+                    className={estilos.campo}
+                    placeholder='Usuário' 
+                    value={usuario}
+                    onChange={ e => setUsuario(e.target.value) }
+                />
 
-    <button className={estilos.botao}>
-    Entrar</button>
+                <input 
+                    className={estilos.campo}
+                    placeholder='Senha' 
+                    value={senha}
+                    onChange={ e => setSenha(e.target.value) }
+                />
+
+                <button
+                    className={estilos.botao}
+                    type='submit'
+                >Entrar</button>
 
             </form>
         </div>

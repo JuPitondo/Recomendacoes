@@ -1,11 +1,11 @@
 import './global.css'
-import { BrowserRouter } from 'react-router-dom'
-import {Rotas} from './paginas/rotas/Rotas'
+import {BrowserRouter} from 'react-router-dom'
+import {Rotas} from './rotas/Rotas'
 
 export function App() {
   return (
     <BrowserRouter>
-    <Rotas/>
+      <Rotas />
     </BrowserRouter>
   )
 }

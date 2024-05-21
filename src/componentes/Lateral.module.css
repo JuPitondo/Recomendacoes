@@ -45,11 +45,11 @@
     height: 45px;
     border-radius: 8px;
     padding: 0 1rem;
+    margin-bottom: 12px;
     border: 1px solid var(--roxo-escuro);
     background-color: transparent;
     color: var(--roxo-escuro);
     transition: color 0.1s, background-color 0.1s;
-    margin-bottom: 15px;
 }
 
 .botao strong {

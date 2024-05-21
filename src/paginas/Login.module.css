@@ -1,29 +1,27 @@
 .conteiner {
+    display: flex;
     height: 100vh;
-    display:flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-
 }
 
-.formulario{
+.formulario {
     display: flex;
     flex-direction: column;
     background-color: var(--cinza-claro);
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
-.campo{
+.campo {
     margin-bottom: 10px;
     padding: 5px;
     border-radius: 6px;
-
 }
 
-.botao{
+.botao {
     background-color: var(--roxo-escuro);
     color: var(--cinza-claro);
-    padding: 8px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 6px;
 }
