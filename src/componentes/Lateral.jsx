@@ -6,11 +6,11 @@ export function Lateral(){
     return(
         <aside className={ estilos.conteiner }>
             <header>
-                <img className={ estilos.imagemCabecalho } src='https://images.unsplash.com/photo-1613469425754-bf71d7280f65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80' />
+                <img className={ estilos.imagemCabecalho } src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F05%2Fcb%2Ff6%2F05cbf67d48ce9c90b2b4fba828b52d23.jpg&f=1&nofb=1&ipt=77c15022bdf5ea3e19b3132fac22da8ef0aa4607aa1dbb32a92d892876b80961&ipo=images' />
 
                 <div className={ estilos.perfil }>
-                    <img className={ estilos.avatar } src='https://avatars.githubusercontent.com/u/60670064?v=4' />
-                    <strong>Prof. Ralfe</strong>
+                    <img className={ estilos.avatar } src='https://avatars.githubusercontent.com/u/160610081?v=4' />
+                    <strong>Juliana Pitondo</strong>
                 </div>
             </header>
             <section className={ estilos.opcoes }>
