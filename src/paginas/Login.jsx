@@ -4,17 +4,17 @@ import {useNavigate} from 'react-router-dom'
 
 export function Login(){
 
-    const [usuario, setUsuario] = useState('')
+    const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
 
     const navigate = useNavigate()
 
 
-    function obterDadosFormulario(e){
+    function autenticarUsuario(e){
 
         e.preventDefault()
 
-        console.log(`Usuário: ${usuario}`)
+        console.log(`E-mail: ${email}`)
         console.log(`Senha: ${senha}`)
 
         navigate('inicial')
@@ -26,14 +26,14 @@ export function Login(){
 
             <form 
                 className={estilos.formulario}
-                onSubmit={obterDadosFormulario}
+                onSubmit={autenticarUsuario}
             > 
 
                 <input 
                     className={estilos.campo}
-                    placeholder='Usuário' 
-                    value={usuario}
-                    onChange={ e => setUsuario(e.target.value) }
+                    placeholder='E-mail' 
+                    value={email}
+                    onChange={ e => setEmail(e.target.value) }
                 />
 
                 <input 

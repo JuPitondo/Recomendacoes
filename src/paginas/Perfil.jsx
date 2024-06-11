@@ -13,15 +13,10 @@ const perfilSchema = z.object({
     email: z.string()
             .email({message: 'Informe um e-mail válido!'}),
 
-    usuario: z.string()
-              .min(5, 'Mínimo de 5 caracteres!')
-              .max(10, 'Máximo de 10 caracteres!'),
-
     senha: z.string()
             .min(6, 'Mínimo de 6 caracteres!')
             .max(6, 'Máximo de 6 caracteres!')      
 })
-
 
 
 export function Perfil(){
@@ -35,7 +30,7 @@ export function Perfil(){
 
 
     function obterDadosFormulario(data){ 
-        console.log(data)
+        alert(`Nome: ${data.nome} \nE-mail: ${data.email} \nSenha: ${data.senha}`)
     }
 
     return(
@@ -66,17 +61,6 @@ export function Perfil(){
                 {errors.email && (
                     <p className={estilos.mensagem}>
                         {errors.email.message}
-                    </p>
-                )}
-
-                <input 
-                    {...register('usuario')}
-                    className={estilos.campo}
-                    placeholder='Usuário' 
-                />
-                {errors.usuario && (
-                    <p className={estilos.mensagem}>
-                        {errors.usuario.message}
                     </p>
                 )}
 
