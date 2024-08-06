@@ -7,7 +7,7 @@
     margin: 10px 5px;
     background-color: var(--roxo-escuro);
     border-radius: 20px;
-    box-shadow: 2px 2px 2px var(--roxo-claro);
+    box-shadow: 2px 2px 2px var(--cinza-escuro);
     transition: transform .3s;
 }
 

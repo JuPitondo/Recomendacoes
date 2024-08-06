@@ -4,6 +4,7 @@ import {Inicial} from '../paginas/Inicial'
 import {Filmes} from '../paginas/Filmes'
 import {Perfil} from '../paginas/Perfil'
 import {Sobre} from '../paginas/Sobre'
+import {Fale} from '../paginas/Fale'
 
 export function Rotas(){
     return(
@@ -15,6 +16,7 @@ export function Rotas(){
                 <Route index element={<Filmes />} />
                 <Route path='perfil' element={<Perfil />} />
                 <Route path='sobre' element={<Sobre />} />
+                <Route path='fale' element={<Fale />} />
             </Route>
 
         </Routes>

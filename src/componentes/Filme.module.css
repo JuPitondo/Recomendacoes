@@ -22,7 +22,7 @@
     margin: 0px auto;
     padding: 10px 0px;
     width: 250px;
-    color: var(--cinza-claro);
+    color: var(--preto);
     text-align: center;
 }
 
@@ -34,7 +34,7 @@
     margin: 0 auto;
     padding: 10px 0px;
     width: 250px;
-    color: var(--cinza-claro);
+    color: var(--preto);
     text-align: justify;
     font-size: 14px;
 }
@@ -45,7 +45,7 @@
     margin: 0px 10px;
     padding: 10px 0px;
     width: 250px;
-    color: var(--cinza-claro);
+    color: var(--preto);
     text-align: left;
     font-size: 14px;
     line-height: 14px;

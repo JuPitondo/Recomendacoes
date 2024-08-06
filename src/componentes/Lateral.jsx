@@ -1,5 +1,5 @@
 import estilos from './Lateral.module.css'
-import {Gear, FilmSlate, User} from '@phosphor-icons/react'
+import {Gear, FilmSlate, User, ChatCircleDots} from '@phosphor-icons/react'
 import {Link} from 'react-router-dom'
 
 import foto from '../assets/usuario.jpg'
@@ -8,10 +8,10 @@ export function Lateral(){
     return(
         <aside className={ estilos.conteiner }>
             <header>
-                <img className={ estilos.imagemCabecalho } src='https://images.unsplash.com/photo-1574267432553-4b4628081c31?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
+                <img className={ estilos.imagemCabecalho } src='https://i.pinimg.com/564x/d1/f9/2a/d1f92aff1ab609ac9c2bc7329085fcbd.jpg' />
 
                 <div className={ estilos.perfil }>
-                    <img className={ estilos.avatar } src={foto} />
+                    <img className={ estilos.avatar } src={`https://i.pinimg.com/564x/c0/0f/f9/c00ff948a52b2001c518474688bd116c.jpg`} />
                     <strong>Usuário</strong>
                 </div>
             </header>
@@ -40,6 +40,16 @@ export function Lateral(){
                     <User size={20} />
                     <strong>Sobre</strong>
                 </Link>
+
+                <Link 
+                    className={ estilos.botao }
+                    to={'fale'}
+                >
+                    <ChatCircleDots size={20} />
+                    <strong>Fale Conosco</strong>
+                </Link>
+
+
 
             </section>
         </aside>
